@@ -9,4 +9,28 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header
+  .menu-bg.row
+    .col-md-4.imagen-menu-bg
+      %img.imagen-menu{:alt => "", :src => "img/logodef.PNG"}/
+    .col-md-8
+      %nav.menu.navbar.navbar-expand-lg
+        %button.ml-auto.navbar-toggler.navbar-dark{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+          %span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          %ul.navbar-nav.ml-auto
+            %li.nav-item
+              %a.nav-link{:href => "calculadora.html"} Calculadora
+            %li.nav-item.active
+              %a#btn-servicios.nav-link{:href => "#"}
+                Servicios
+                %span.sr-only
+            %li.nav-item
+              %a#btn-pasos.nav-link{:href => "#"} Procedimiento
+            %li.nav-item
+              %a#btn-tiendas.nav-link{:href => "#"} Tiendas
+            %li.nav-item
+              %a#btn-precios.nav-link{:href => "#"} Precios
+            %li.nav-item
+              %a#btn-ubicacion.nav-link{:href => "#"} Contacto
     = yield
